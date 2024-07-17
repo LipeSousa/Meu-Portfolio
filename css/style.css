@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/6a28a1fb5b77054a12626d0c23c92aa2?family=Cera+CY+Bold');
+
+/* Definições Gerais */
+
+:root {
+    --dark: radial-gradient(circle, #3c3e42 , #24262b, #17191d );
+    --white: radial-gradient(circle, #3c3e42 , #808288, #ffffff );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    color: aliceblue;
+    transition: .5s all linear;
+}
+
+.disable-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: var(--dark);
+    background-position: center;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: .5rem;
+}
+ 
+*::-webkit-scrollbar-track{
+    background-color: #17191d;
+ }
+ 
+*::-webkit-scrollbar-thumb{
+    background: #3c3e42;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    width: 100%;
+}
+
+header .logo {
+    margin-left: 40px;
+    visibility: hidden;
+}
+
+header .logo p {
+    font-family: "Cera CY Bold";
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+header .logo p:hover {
+    color: var(--clr);
+}
+
+header .nav-bar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-right: 100px;
+    width: 25%;
+    height: 5%;
+    visibility: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+header .nav-bar a {
+    position: relative;
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 15px;
+    transition: 0.5s;
+}
+
+header .nav-bar a:hover {
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+header .nav-bar a:before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #27282c;
+}
+
+header .nav-bar a span {
+    position: relative;
+    z-index: 1;
+}
+
+header .nav-bar a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+header .nav-bar a i:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background-color: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: .5s;
+}
+
+header .nav-bar a:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+/* Inicio */
+
+.container {
+    height: 75vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.container .text-one{
+    width: 100%;
+    margin-left: 80px;
+    margin-bottom: -630px;
+    color: black;
+    visibility: hidden;
+}
+
+.container .text-two{
+    font-family: "Cera CY Bold";
+    font-weight: bolder;
+    font-size: 8rem;
+    letter-spacing: 0.05rem;
+    margin-top: 300px;
+    visibility: hidden;
+}
+
+.container .text-three {
+    width: 100%;
+    margin-left: 153px;
+    padding-bottom: 400px;
+}
+
+.container .text-three .text-three-visibility {
+    visibility: hidden;
+}
+
+.social-media {
+    display: grid;
+    width: 10vw;
+    height: 10vh;
+    visibility: hidden;
+}
+
+.social-media a {
+    width: 10px;
+}
+
+.social-media i {
+    font-size: 1.3rem;
+    margin-left: 60px;
+    border: 1px solid white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+}
+
+.social-media i:hover {
+    color: #000000;
+    background-color: var(--clr);
+    border: 1px solid var(--clr);
+}
+
+/* Projetos */
+
+.container-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+    height: 100vh;
+}
+
+.container-project .animation {
+    display: inline-block;
+    margin: 0 0 0 30px;
+    position: relative;
+    width: 400px;
+    height: 520px;
+    background: #34383f;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px black;
+    visibility: hidden;
+}
+
+.container-project .animation::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -80%;
+    width: 480px;
+    height: 520px;
+    background: linear-gradient(0deg, transparent, transparent, #1e9bff, #1e9bff, #1e9bff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.container-project .animation::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -80%;
+    width: 480px;
+    height: 520px;
+    z-index: 1;
+    background: linear-gradient(0deg, transparent, transparent, #ff1867, #ff1867, #ff1867);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container-project .animation .in-animation { 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #34383f;
+    margin: 5px;
+    width: 390px;
+    height: 510px;
+    border-radius: .5rem;    
+    z-index: 2;
+    overflow: hidden;
+}
+
+.container-project .animation .in-animation img{
+    border-radius: .5rem;
+    width: 350px;
+    height: 300px;
+}
+
+.container-project .animation .in-animation .hidden-btn {
+    display: none;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow: inset 0 0 0 0 transparent;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.9s;
+}
+
+.container-project .animation .in-animation .hidden-btn:hover {
+    box-shadow: inset 0 0 0 50px var(--clr);
+    border-color: var(--clr);
+}
+
+.container-project .animation .in-animation:hover .hidden-btn {
+    display: block;
+}
+
+.container-project .animation .in-animation h4,p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sobre */
+
+.about {
+    height: 100vh;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-container {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05rem;
+    padding: 100px 150px;
+    box-shadow: 5px 5px 100px rgb(31, 30, 30);
+}
+
+.about .about-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about .about-container h4 {
+    text-decoration: none;
+    border-right: 2px solid;
+    white-space: nowrap;
+    width: 11ch;
+    overflow: hidden;
+    animation: animateText steps(11) 5s, mark 0.5s linear infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mark {
+    20% {
+        border-right: transparent;
+    }
+}
+
+@keyframes animateText {
+    0% {
+        width: 0;
+    }
+}
+
+.about .about-container span {
+    text-decoration: underline;
+    color: #1e9bff;
+}
+
+/* Sobre os Projetos */
+/* usei as códigos de sobre e so estou adicionado css sobre as imagens */
+
+.about .about-container .back {
+    text-align: start;
+    width: 100%;
+    height: 30px;
+}
+
+.about .about-container .back a {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.about .about-container .back i:hover {
+    color: #1e9bff;
+}
+
+.about .about-container .img-project {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 1000px;
+}
+
+.about .about-container .img-project .img-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.about .about-container .img-project .img-container img {
+    object-fit: cover;
+    height: 500px;
+    width: 1000px;
+}
+
+.about .about-container .links a {
+    display: grid;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width: 20%;
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow: inset 0 0 0 0 transparent;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.9s;
+}
+
+.about .about-container .links a:hover { 
+    box-shadow: inset 0 0 0 50px var(--clr);
+    border-color: var(--clr);
+}
+
+
+
+/* Contato */
+
+.contact {
+    height: 100vh;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .conctact-container {
+    padding: 200px 200px;
+    box-shadow: 5px 5px 100px rgb(31, 30, 30);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+.contact .conctact-container .one {
+    margin-bottom: 50px;
+}
+
+.contact .conctact-container h4 {
+    margin-bottom: 20px;
+}
+
+.contact .conctact-container p {
+    margin-bottom: 20px;
+}
+
+.contact .conctact-container .a-hrefs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+.contact .conctact-container .a-hrefs i {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 0 transparent;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.9s;
+}
+
+.contact .conctact-container .a-hrefs i:hover {
+    box-shadow: inset 0 0 0 50px var(--clr);
+    border-color: var(--clr);
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 1rem;
+
+    }
+}
+
